@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar</title>
+</head>
+<body>
+    <div class="sidebar" th:fragment="sidebar-fragment">
+        <div class="logo-details">
+            <div class="logo_name">
+                <span>Project Tabula</span>
+            </div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="#">
+                    <i class='bx bxl-spring-boot'></i>
+                    <span class="links_name">About Project</span>
+                </a>
+                <span class="tooltip">About Project</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="links_name">Boards</span>
+                </a>
+                <span class="tooltip">Boards</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <!--                <img src="profile.jpg" alt="profileImg">-->
+                    <div class="name_job">
+                        <div class="name">Mikita</div>
+                        <div class="job">Manager</div>
+                    </div>
+                </div>
+                <form th:action="@{/auth/logout}" th:method="POST">
+                    <button type="submit">
+                        <i class='bx bx-log-out' id="log_out" style="cursor: pointer;"></i>
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

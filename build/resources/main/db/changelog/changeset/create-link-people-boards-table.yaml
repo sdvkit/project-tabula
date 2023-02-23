@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: nikitasudaev
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: board_id
+                  type: BIGINT
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: person_id
+                  type: BIGINT
+            tableName: link_people_boards
+  - changeSet:
+      id: 9
+      author: nikitasudaev
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: board_id
+            baseTableName: link_people_boards
+            constraintName: link_people_boards_board_id_fkey
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: boards
+            validate: true
+  - changeSet:
+      id: 10
+      author: nikitasudaev
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: person_id
+            baseTableName: link_people_boards
+            constraintName: link_people_boards_person_id_fkey
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: people
+            validate: true

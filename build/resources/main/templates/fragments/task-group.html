@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task group</title>
+</head>
+<body>
+  <div class="task-group" th:fragment="taskGroup (id, name)" th:id="${id}">
+    <div class="group-header">
+      <span class="group-name" th:text="${name}"></span>
+      <i class='bx bx-plus'></i>
+    </div>
+    <div class="tasks-container">
+    </div>
+  </div>
+</body>
+</html>

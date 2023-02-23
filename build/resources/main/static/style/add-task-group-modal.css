@@ -1,0 +1,46 @@
+#add-task-group-modal .modal-content {
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: #181e25;
+    height: 200px;
+    width: 400px;
+    margin: 0;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+    z-index: 3;
+}
+
+#task-group-name {
+    background-color: #0e1217;
+    color: #AAACAF;
+    width: 100%;
+    border: 3px solid #0e1217;
+    outline: 0;
+    font-size: 11pt;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+#save-group-button {
+    background-color: #4786FF;
+    border: 1px solid #4786FF;
+    font-size: 11pt;
+    padding: 3px;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 100px;
+    float: right;
+}
+
+.modal-content__main span {
+    color: #54585A;
+    font-size: 10pt;
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+html {
+    background-color: #0e1217;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.home-section{
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 75px;
+    width: calc(100% - 75px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.sidebar.open ~ .home-section{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.home-section header .page_title {
+    color: #fff;
+    font-size: 15pt;
+    padding-top: 110px;
+    padding-left: 110px;
+    width: 250px;
+
+}
+
+.home-section .content {
+    width: 100%;
+    display: grid;
+    padding-bottom: 50px;
+    padding-left: 110px;
+    grid-template-columns: repeat(auto-fill, 220px);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.home-section .content .board {
+    height: 100px;
+    background-color: #181e25;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    inline-size: 220px;
+    line-height: 21px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid #222327;
+}
+
+.home-section .content .board:hover {
+    background-color: #4786FF;
+    transition: 0.3s;
+    color: #0e1217;
+}
+
+.home-section .content .board:not(:hover) {
+    transition: 0.3s;
+}
+
+.board_adder {
+    color: #4786FF;
+    font-size: 11pt;
+    background-color: #171d24;
+    border-radius: 8px;
+    border: 1px solid #171d24;
+    cursor: pointer;
+    float: left;
+    width: 120px;
+    padding: 8px;
+    margin-left: 110px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.board_adder:hover {
+    color: black;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.board_adder:not(:hover){
+    transition: 0.5s;
+}
+
+.board_adder .bx-plus {
+    font-size: 15pt;
+    border-radius: 8px;
+    float: left;
+}

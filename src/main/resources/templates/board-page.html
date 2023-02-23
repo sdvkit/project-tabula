@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Tabula</title>
+    <link rel="stylesheet" th:href="@{/style/sidebar-style.css}">
+    <link rel="stylesheet" th:href="@{/style/home-section-style.css}">
+    <link rel="stylesheet" th:href="@{/style/basic-modal.css}">
+    <link rel="stylesheet" th:href="@{/style/add-task-group-modal.css}">
+    <link rel="icon" href="https://codingbirdsonline.com/wp-content/uploads/2019/12/cropped-coding-birds-favicon-2-1-192x192.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div th:replace="~{fragments/sidebar :: sidebar-fragment}"></div>
+    <section class="home-section">
+        <div th:replace="~{fragments/add-task-modal :: #add-task-modal}"></div>
+        <div th:replace="~{fragments/add-task-group-modal :: #add-task-group-modal}"></div>
+        <div class="wrapper">
+            <header>
+                <div class="navbar">
+                    <div class="board-title">
+                        <p th:text="${'# ' + board.name()}"></p>
+                    </div>
+                </div>
+                <div class="task-group-adder">
+                    <i class='bx bx-plus'></i> Add Group
+                </div>
+            </header>
+            <div class="content">
+                <div class="task-groups">
+                    <div class="task-group" th:each="taskGroup : ${board.taskGroupDtos()}" th:id="${taskGroup.id()}">
+                        <div class="group-header">
+                            <span class="group-name" th:text="${taskGroup.name()}" />
+                            <i class='bx bx-plus'></i>
+                        </div>
+                        <div class="tasks-container">
+                            <div th:each="task : ${taskGroup.tasks()}">
+                                <div th:replace="~{fragments/task :: task (id=${task.id()}, name=${task.title()}, description=${task.description()}, creation=${task.creationDate()})}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script th:src="@{/script/sidebar-script.js}"></script>
+<script th:src="@{/script/drag-and-drop.js}"></script>
+<script th:src="@{/script/board-page.js}"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.sdv.kit.projecttabula.mapper.PersonMapperTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-01-24T09:52:23" hostname="MacBook-Air-Nikita.local" time="0.678">
+  <properties/>
+  <testcase name="toDtoTest()" classname="com.sdv.kit.projecttabula.mapper.PersonMapperTest" time="0.657"/>
+  <testcase name="fromDtoTest()" classname="com.sdv.kit.projecttabula.mapper.PersonMapperTest" time="0.01"/>
+  <system-out><![CDATA[12:52:12.763 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [PersonMapperTest]: using SpringBootContextLoader
+12:52:12.774 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.sdv.kit.projecttabula.mapper.PersonMapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:52:12.776 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.sdv.kit.projecttabula.mapper.PersonMapperTest]: PersonMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:52:12.853 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [PersonMapperTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+12:52:13.074 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/nikitasudaev/IdeaProjects/ProjectTabula/build/classes/java/main/com/sdv/kit/projecttabula/ProjectTabulaApplication.class]
+12:52:13.077 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.sdv.kit.projecttabula.ProjectTabulaApplication for test class com.sdv.kit.projecttabula.mapper.PersonMapperTest
+12:52:13.323 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [PersonMapperTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+12:52:13.326 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [PersonMapperTest], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.0)
+
+2023-01-24T12:52:13.972+03:00  INFO 54424 --- [    Test worker] c.s.k.p.mapper.PersonMapperTest          : Starting PersonMapperTest using Java 17.0.5 with PID 54424 (started by nikitasudaev in /Users/nikitasudaev/IdeaProjects/ProjectTabula)
+2023-01-24T12:52:13.976+03:00  INFO 54424 --- [    Test worker] c.s.k.p.mapper.PersonMapperTest          : No active profile set, falling back to 1 default profile: "default"
+2023-01-24T12:52:15.438+03:00  INFO 54424 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-24T12:52:15.626+03:00  INFO 54424 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 172 ms. Found 4 JPA repository interfaces.
+2023-01-24T12:52:16.546+03:00  INFO 54424 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-24T12:52:16.970+03:00  INFO 54424 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@76396509
+2023-01-24T12:52:16.974+03:00  INFO 54424 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-24T12:52:17.393+03:00  INFO 54424 --- [    Test worker] liquibase.database                       : Set default schema name to public
+2023-01-24T12:52:17.659+03:00  INFO 54424 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2023-01-24T12:52:18.177+03:00  INFO 54424 --- [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2023-01-24T12:52:18.332+03:00  INFO 54424 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2023-01-24T12:52:18.482+03:00  INFO 54424 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-24T12:52:18.580+03:00  INFO 54424 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2023-01-24T12:52:18.958+03:00  WARN 54424 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-24T12:52:19.254+03:00  INFO 54424 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-24T12:52:20.772+03:00  INFO 54424 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-24T12:52:20.791+03:00  INFO 54424 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-24T12:52:21.709+03:00  WARN 54424 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-24T12:52:22.424+03:00  INFO 54424 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19412eef, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@542b27af, org.springframework.security.web.context.SecurityContextHolderFilter@318f47f1, org.springframework.security.web.header.HeaderWriterFilter@63bb719d, org.springframework.security.web.csrf.CsrfFilter@3359217d, org.springframework.security.web.authentication.logout.LogoutFilter@77cd1f67, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@276b68af, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@50915d5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@69eb1f23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39d44217, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c54d0dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e092ca, org.springframework.security.web.access.ExceptionTranslationFilter@73bb782d, org.springframework.security.web.access.intercept.AuthorizationFilter@44b1d2fa]
+2023-01-24T12:52:23.199+03:00  INFO 54424 --- [    Test worker] c.s.k.p.mapper.PersonMapperTest          : Started PersonMapperTest in 9.786 seconds (process running for 12.66)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

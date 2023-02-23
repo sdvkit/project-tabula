@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add task modal</title>
+</head>
+<body>
+  <div id="add-task-modal" class="modal">
+    <div class="modal-content">
+      <span id="task-modal-close-button"></span>
+      <div class="title">
+        <span id="new-task-span">New Task</span>
+      </div>
+      <form class="modal-content__main" action="#" method="post">
+        <input type="text" name="Task Name" id="task-name" placeholder="What to do">
+        <input type="text" placeholder="Expiration date" name="Expiration date" id="task-expiration">
+        <textarea name="Task description" id="task-description" rows="7" placeholder="Describe your task ..."></textarea>
+        <span>Press Enter to save the Task</span>
+        <input type="submit" id="save-task-button" value="Save" class="save-button">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

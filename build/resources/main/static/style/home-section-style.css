@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: #0e1217;
+    height: 100vh;
+}
+
+.selected {
+    display: none;
+}
+
+.drag-over {
+    width: 296px;
+    transition: 0.2s;
+    margin-top: 2px;
+    box-shadow: #4786FF 0px 3px 1px, #4786FF 0px 0px 0px 2px;
+    margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.home-section{
+    position: relative;
+    height: 100vh;
+    top: 0;
+    left: 75px;
+    width: calc(100% - 75px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.sidebar.open ~ .home-section{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+header {
+    width: 100%;
+    margin-top: -10px;
+    position: fixed;
+    background-color: #0e1217;
+    border-bottom: 2px solid #424449;
+}
+
+header .navbar {
+    color: #fff;
+    width: 100%;
+    padding: 5px;
+    border-bottom: 2px solid #424449;
+}
+
+.board-title{
+    font-size: 13pt;
+    margin-left: 20px;
+    width: 600px;
+}
+
+.wrapper .content {
+    padding-left: 10px;
+    padding-top: 80px;
+}
+
+.task-groups {
+    padding-left: 10px;
+    padding-top: 50px;
+    display: flex;
+    align-items:flex-start;
+    align-content:flex-start;
+    overflow-x: auto;
+}
+
+.task-group {
+    background-color: #171d24;
+    margin-right: 20px;
+    border: 1px solid #222327;
+    border-radius: 8px;
+}
+
+.tasks-container {
+    margin-top: 10px;
+    padding-bottom: 140px;
+    max-height: 70vh;
+    padding-left: 8px;
+    padding-right: 8px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.tasks-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.group-header {
+    color: #fff;
+    padding: 8px;
+    width: 296px;
+    background-color: #0e1217;
+    border-radius: 8px 8px 0 0;
+}
+
+.group-name {
+    margin-top: -10px;
+    font-size: 11pt;
+    margin-left: 10px;
+}
+
+.group-header .bx-plus {
+    padding: 2px;
+    color: #4786FF;
+    background-color: #1e2021;
+    font-size: 15pt;
+    cursor: pointer;
+    float: right;
+    border-radius: 8px;
+}
+
+.group-header .bx-plus:hover {
+    color: black;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.group-header .bx-plus:not(:hover){
+    transition: 0.5s;
+}
+
+.task-group-adder {
+    color: #4786FF;
+    font-size: 11pt;
+    background-color: #171d24;
+    border-radius: 8px;
+    border: 1px solid #171d24;
+    cursor: pointer;
+    float: left;
+    width: 120px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.task-group-adder:hover {
+    color: black;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.task-group-adder:not(:hover){
+    transition: 0.5s;
+}
+
+.task-group-adder .bx-plus {
+    font-size: 15pt;
+    border-radius: 8px;
+    float: left;
+}
+
+.task {
+    color: #fff;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    /*height: 140px;*/
+    background-color: #0e1217;
+    inline-size: 280px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #222327;
+    border-radius: 8px;
+}
+
+.task-header {
+    height: 30px;
+}
+
+.task-header span {
+    inline-size: 150px;
+    overflow: hidden;
+    height: 25px;
+    float: left;
+}
+
+.task-header .bx-dots-vertical-rounded {
+    padding: 6px;
+    color: #fff;
+    float: right;
+    border-radius: 8px;
+}
+
+.task-header .bx-dots-vertical-rounded:hover {
+    background-color: #424449;
+    transition: 0.5s;
+}
+
+.task-header .bx-dots-vertical-rounded:not(:hover) {
+    transition: 0.5s;
+}
+
+.task-content  ul {
+    list-style: none;
+    color: #fff;
+}
+
+.task-content  ul .description {
+    color: #424449;
+    /*inline-size: 225px;*/
+    overflow: hidden;
+    /*min-height: 30px;*/
+    /*line-height: 15px;*/
+    width: 225px;
+    word-wrap: break-word;
+    font-size: 11pt;
+}
+
+.task-content  ul .creation{
+    color: #AAACAF;
+    width: 120px;
+    font-size: 11pt;
+    margin-top: 10px;
+}
+
+.task-content  ul .expiration{
+    border-radius: 8px;
+    color: #c96868;
+    font-size: 11pt;
+    margin-left: -5px;
+}
+
+.task-content  ul .expiration .bxs-hourglass {
+    margin-left: 5px;
+}

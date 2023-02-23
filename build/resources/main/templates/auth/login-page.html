@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/style/login-page-style.css}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="background"></div>
+        <div class="content">
+            <div class="logo">
+                <span>Project Tabula</span>
+            </div>
+            <div class="description">
+                <span>Please login to your account</span>
+            </div>
+            <form th:action="@{/auth/login/process}" th:method="POST">
+                <div class="txt_field">
+                    <input type="text" name="username" id="username" required>
+                    <span></span>
+                    <label>Email address</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="password" id="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div th:if="${param.error}" class="error_span">Invalid Email or Password</div>
+                <input class="login_button" type="submit" value="Login">
+                <a class="create_button" href="#">or Create account</a>
+            </form>
+            <div class="google_login">
+                <a th:href="@{/oauth2/authorization/google}" class="text">
+                    <i class='bx bxl-google'></i> Login with Google
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Task</title>
+</head>
+<body>
+  <div class="task" th:fragment="task (id, name, description, creation)" th:id="${id}" draggable="true">
+    <div class="task-header">
+      <span th:text="${name}"></span>
+      <i class='bx bx-dots-vertical-rounded'></i>
+    </div>
+    <div class="task-content">
+      <ul>
+        <li class="description" th:text="${description}"></li>
+        <li class="creation">
+          <i class='bx bx-calendar'></i>
+          <span th:text="${creation}"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

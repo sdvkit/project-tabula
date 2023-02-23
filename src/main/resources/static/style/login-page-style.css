@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Poppins" , sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #0e1217;
+}
+
+.background {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 165vh;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='900' height='560' preserveAspectRatio='none' viewBox='0 0 900 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1029%26quot%3b)' fill='none'%3e%3crect width='900' height='560' x='0' y='0' fill='rgba(14%2c 18%2c 23%2c 1)'%3e%3c/rect%3e%3cpath d='M450 646.59C566.08 651.01 691.94 684.94 783.54 613.54 882.04 536.77 933.68 404.13 920.15 280 907.57 164.37 806.08 87.97 718.02 11.98 638.97-56.23 554.31-120.89 450-125.65 341.2-130.62 232.77-91.25 156.41-13.59 80.62 63.49 53.9 171.95 51.15 280 48.29 391.49 58.9 513.51 141.01 588.99 221.18 662.67 341.17 642.44 450 646.59' fill='rgba(28%2c 106%2c 255%2c 1)'%3e%3c/path%3e%3cpath d='M450 517.2C525.11 520.06 606.55 542.02 665.82 495.82 729.55 446.14 762.97 360.32 754.22 280 746.08 205.18 680.41 155.74 623.43 106.57 572.28 62.44 517.5 20.6 450 17.52 379.6 14.31 309.44 39.78 260.03 90.03 210.99 139.9 193.7 210.08 191.92 280 190.07 352.14 196.93 431.1 250.06 479.94 301.94 527.61 379.58 514.52 450 517.2' fill='rgba(71%2c 134%2c 255%2c 1)'%3e%3c/path%3e%3cpath d='M450 387.82C484.14 389.12 521.16 399.1 548.1 378.1 577.07 355.52 592.26 316.51 588.28 280 584.58 245.99 554.73 223.52 528.83 201.17 505.58 181.11 480.68 162.09 450 160.69 418 159.23 386.11 170.81 363.65 193.65 341.36 216.32 333.5 248.22 332.69 280 331.85 312.79 334.97 348.68 359.12 370.88 382.7 392.55 417.99 386.6 450 387.82' fill='rgba(14%2c 18%2c 23%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1029'%3e%3crect width='900' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.content {
+    height: 100vh;
+    padding-left: 100px;
+    display: inline-block;
+}
+
+.content .logo {
+    padding-top: 100px;
+    color: #fff;
+    font-size: 20pt;
+}
+
+.content .description {
+    color: #AAACAF;
+    font-size: 11pt;
+}
+
+.content .google_login {
+    color: #AAACAF;
+    font-size: 11pt;
+    background-color: #171d24;
+    border-radius: 8px;
+    border: 1px solid #171d24;
+    cursor: pointer;
+    width: 180px;
+    padding: 8px;
+    margin-top: 40px;
+    margin-left: 0;
+    text-decoration: none;
+}
+
+.content .google_login:hover {
+    color: black;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.content .google_login:not(:hover){
+    transition: 0.5s;
+}
+
+.content .google_login .text {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+}
+
+.content .google_login .text:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.content .google_login .text:not(:hover){
+    transition: 0.5s;
+}
+
+.content .google_login .bxl-google {
+    font-size: 15pt;
+    border-radius: 8px;
+    margin-right: 10px;
+    float: left;
+    color: #4786FF;
+}
+
+.content .another_login {
+    color: #AAACAF;
+    font-size: 11pt;
+    margin-top: 30px;
+}
+
+.content form {
+    color: #AAACAF;
+    display: block;
+    width: 350px;
+    margin-top: 50px;
+}
+
+.content form .error_span {
+    color: rgba(250, 52, 52, 0.71);
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #4786FF;
+    transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #4786FF;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+.content form .login_button {
+    background-color: #4786FF;
+    border: 1px solid #4786FF;
+    font-size: 11pt;
+    padding: 5px;
+    width: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.content form .create_button {
+    font-size: 11pt;
+    padding: 5px;
+    width: 100px;
+    text-decoration: none;
+    color: #AAACAF;
+    margin-left: 20px;
+}
+
+.content form .create_button:hover {
+    transition: 0.5s;
+    color: #4786FF;
+}
+
+.content form .create_button:not(:hover) {
+    transition: 0.5s;
+}

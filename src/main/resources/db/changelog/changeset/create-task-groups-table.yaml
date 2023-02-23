@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: nikitasudaev
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(30)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: board_id
+                  type: BIGINT
+            tableName: task_groups
+  - changeSet:
+      id: 11
+      author: nikitasudaev
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: board_id
+            baseTableName: task_groups
+            constraintName: task_groups_board_id_fkey
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: boards
+            validate: true

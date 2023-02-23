@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{/style/home-page.css}">
+    <link rel="stylesheet" th:href="@{/style/sidebar-style.css}">
+    <link rel="stylesheet" th:href="@{/style/add-board-modal.css}">
+    <link rel="stylesheet" th:href="@{/style/basic-modal.css}">
+</head>
+<body>
+    <div th:replace="~{fragments/sidebar :: sidebar-fragment}"></div>
+    <section class="home-section">
+        <div id="add-board-modal" class="modal">
+            <div class="modal-content">
+                <span id="add-board-modal-close-button"></span>
+                <div class="title">
+                    <span>New Board</span>
+                </div>
+                <form class="modal-content__main" action="#" method="post">
+                    <input type="text" placeholder="Board's name" name="Board's name" id="board-name">
+                    <span>Press Enter to save the Board</span>
+                    <input type="submit" id="save-board-button" value="Save" class="save-button">
+                </form>
+            </div>
+        </div>
+        <header>
+            <div class="page_title">
+                Your boards
+            </div>
+            <div class="board_adder">
+                <i class='bx bx-plus'></i> Add Board
+            </div>
+        </header>
+        <div class="content">
+            <a th:each="board : ${boards}" th:href="@{/boards/{id}(id=${board.id()})}" class="board" th:text="${board.name()}" />
+        </div>
+    </section>
+    <script th:src="@{/script/sidebar-script.js}"></script>
+    <script th:src="@{/script/add-new-board.js}"></script>
+</body>
+</html>
